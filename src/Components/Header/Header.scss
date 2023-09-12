@@ -1,0 +1,131 @@
+.Header {
+    // background-color: red;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 20vh;
+    float: right;
+    padding-top: 40px;
+
+    // &-logo {
+    //     // padding-left: 20px;
+    // }
+
+    &-line {
+        border-top: 1px solid #979797;
+        width: 35%;
+        /* padding: 0; */
+        position: absolute;
+        /* float: left; */
+        transform: translateX(120px);
+        z-index: 2;
+    }
+
+    &-nav{
+        // background: #369;
+        width: 55vw;
+        // padding: 50px;
+        background-color: rgba(17, 39, 77, 0.4);
+    backdrop-filter: blur(30px);
+    }
+
+    &-ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+    }
+
+    &-li {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 16px;
+        letter-spacing: 2.7px;
+        color: #FFFFFF;
+        padding:  40px 0 35px 0;
+    }
+
+    &-li:after {
+        position: relative;
+        top: 37px;
+        content: "";
+        // display: inline-block;
+        width: 0px;
+        background: #979797;
+        height: 3px;
+        opacity: 0;
+        transition: opacity, width;
+        transition-duration: .3s;
+      }
+      
+      &-li:hover:after {
+        opacity: 1;
+        width: 100%;
+      }
+
+      &-a {
+        cursor: pointer;
+      }
+
+    &-liF {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 16px;
+        letter-spacing: 2.7px;
+        color: #FFFFFF;
+        padding:  40px 30px 40px 0;
+    }
+
+    &-liF:after {
+        position: relative;
+        top: 37px;
+        content: "";
+        // display: inline-block;
+        width: 0px;
+        background: #979797;
+        height: 3px;
+        opacity: 0;
+        transition: opacity, width;
+        transition-duration: .3s;
+      }
+      
+      &-liF:hover:after {
+        opacity: 1;
+        width: 100%;
+      }
+
+
+      @media (max-width: 1388px) { 
+        &-line {
+          transform: translateX(110px);
+        }
+        &-liF {
+            padding:  40px 0px 40px 0;
+        }
+      }
+
+      @media (max-width: 1210px) { 
+        &-line {
+          display: none;
+        }
+      }
+
+  
+
+}
+
+@media (max-width: 1090px) { 
+
+  .Header {
+    padding: 0;
+
+    &-nav {
+      width: 70vw;
+  }
+
+  &-ul {
+      gap: 2em;
+  }
+  }
+  
+}

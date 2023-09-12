@@ -1,10 +1,14 @@
+import './App.scss'
+import Header from "./Components/Header/Header"
+import Home from "./Components/Home/Home"
 
 function App() {
 
   return (
-    <>
-      <h1>Hola</h1>
-    </>
+    <div>
+      <Header/>
+      <Home/>
+    </div>
   )
 }
 
