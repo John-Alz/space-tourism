@@ -8,6 +8,15 @@
     /* Tipografía */
     --tipo-principal   : 'Bellefair', serif;
     --tipo-secundaria  : 'Barlow Condensed', sans-serif;
+    ::-webkit-scrollbar {
+      // background-color: rgb(57, 59, 76);
+      background-color: rgb(12, 14, 26);
+      width: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(57, 59, 76);
+      // background-color: rgb(12, 14, 26);
+    }
   }
   
   /* Reseteamos los margin y paddings de todas las etiquetas */
@@ -68,8 +77,8 @@
   
   /* (Opcional) Configuramos el texto que seleccionamos */
   ::selection {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
   }
   
   /* Nivelamos problemas de tipografías y colocación de formularios */

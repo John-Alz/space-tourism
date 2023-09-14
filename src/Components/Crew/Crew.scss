@@ -1,0 +1,284 @@
+.Crew {
+    background: url('../../assets/crew/background-crew-desktop.jpg');
+    // height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-container {
+        // background-color: red;
+        // height: 100vh;
+        width: 100%;
+        display: flex;
+        height: 100vh;
+    }
+
+    &-left {
+        // background-color: aqua;
+        width: 55%;
+        height: 500px;
+    }
+
+
+    &-ldivc {
+        // background-color: green;
+        display: flex;
+        margin: 0 auto;
+        padding: 100px 0 0 180px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-lone {
+        display: flex;
+        gap: 1em;
+        margin-bottom: 140px;
+    }
+    
+    &-lone p{
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 28px;
+        color: #464A53;
+        text-transform: uppercase;
+        letter-spacing: 4.72px;
+    }
+
+    &-lone  h1{
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 28px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        letter-spacing: 4.72px;
+    }
+
+    &-profetion {
+        margin-bottom: 10px;
+    }
+
+    &-profetion h2{
+        font-family: 'Bellefair', serif;
+        font-size: 32px;
+        color: #91959E;
+        text-transform: uppercase;
+    }
+
+    &-name {
+        margin-bottom: 20px;
+    }
+
+    &-name h1{
+        font-family: 'Bellefair', serif;
+        font-size: 56px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+
+    &-description {
+        margin-bottom: 20px;
+        height: 200px;
+        width: 444px;
+    }
+
+    &-description p{
+        color: #D0D6F9;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    &-ul {
+        display: flex;
+        gap: 2em;
+        // background: #464A53;
+    }
+
+    &-li {
+        background-color: #979797;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+    }
+
+    &-li:hover {
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    &-a {
+        height: 0;
+    }
+
+
+    &-right {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    // &-rdivc {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: flex-end;
+    // }
+
+    &-rdivc img{
+        height: 90vh;
+        // height: 500px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px) { 
+    /*Tablets [601px -> 1200px]*/
+    .Crew {
+        background: url('../../assets/crew/background-crew-tablet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        // height: 109vh;
+
+        &-container {
+            flex-direction: column;
+            // height: 90%;
+        }
+
+        &-left {
+            width: 100%;
+        }
+
+        &-ldivc {
+            margin: 0;
+            padding-left: 40px;
+            width: 80%;
+            // background-color: blue;
+        }
+
+
+        &-lone {
+            margin-bottom: 80px;
+        }
+
+        &-lone p, h1{
+            font-size: 20px;
+            letter-spacing: 3.38px;
+        }
+        &-info {
+            width: 520px;
+            display: flex;
+            flex-direction: column;
+            // background-color: red;
+            margin-left: 105px;
+        }
+
+
+        &-profetion h2{
+            font-size: 24px;
+            text-align: center;
+        }
+    
+        &-name h1{
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &-description {
+            // background-color: red;
+            margin: 0 auto;
+            height: 150px;
+        }
+    
+        &-description p{
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+        }
+
+        &-ul {
+            // background-color: red;
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        &-li {
+            // background-color: blue;
+            justify-content: center;
+        }
+
+        &-right {
+            width: 100%;
+            // background: red;
+        }
+    
+        &-rdivc img{
+            max-width: 350px;
+            height: auto;
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    .Crew {
+        background: url('../../assets/crew//background-crew-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        // height: 109vh;
+
+    &-ldivc {
+        padding: 0;
+        width: 100%;
+        // background-color: blue;
+    }
+
+    &-lone {
+        margin-top: 50px;
+        justify-content: center;
+    }
+    
+    &-lone p, h1{
+        font-size: 16px;
+        letter-spacing: 2.7px;
+    }
+
+    &-info {
+        margin: 0;
+        width: 100%;
+        // background: red;
+}
+
+    &-profetion h2{
+        font-size: 16px;
+    }
+
+    &-name h1{
+        font-size: 24px;
+    }
+
+    &-description {
+        width: 327px;
+    }
+
+    &-description p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    &-rdivc img{
+        max-width: 200px;
+    }
+
+}
+
+}
+
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    
+    
+}
