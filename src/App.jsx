@@ -1,14 +1,19 @@
+import { Routes, Route } from "react-router-dom";
 import './App.scss'
-import Header from "./Components/Header/Header"
+import Destination from './Components/Destination/Destination'
 import Home from "./Components/Home/Home"
+import Header from "./Components/Header/Header";
 
 function App() {
 
   return (
-    <div>
-      <Header/>
-      <Home/>
-    </div>
+    <>
+    <Header/>
+    <Routes>
+        <Route path="/" exact element={<Home/>} />
+        <Route path="/destination" element={<Destination/>} />
+    </Routes>
+    </>
   )
 }
 

@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.scss'
 import logo from '../../assets/shared/logo.svg'
+import iconBurger from '../../assets/shared/icon-hamburger.svg'
+import iconClose from '../../assets/shared/icon-close.svg'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
+
+
+  const [menu, setMenu] = useState(false)
+
+  const handleToggle = () => {
+    setMenu(!menu)
+  }
+
   return (
     <header className='Header'>
       
@@ -12,27 +23,31 @@ export default function Header() {
 
       <div className='Header-line'></div>
 
-      <nav className='Header-nav'>
+      <button onClick={handleToggle} className='Header-button'>
+        <img className='Header-btnimg' src={menu ? iconClose :iconBurger} alt='iconClose'/>
+      </button>
+
+      <nav className={`Header-nav ${menu ? 'isActive' : ''}`}>
         <ul className='Header-ul'>
           <li className='Header-li'>
-            <a className='Header-a'>
+            <Link to="/" className='Header-a'>
             00 HOME
-            </a>
+            </Link>
           </li>
           <li className='Header-li'>
-            <a className='Header-a'>
+            <Link to="/destination" className='Header-a'>
             01 DESTINATION
-            </a>
+            </Link>
           </li>
           <li className='Header-li'>
-            <a className='Header-a'>
+            <Link to="/crew" className='Header-a'>
             02 CREW
-            </a>
+            </Link>
           </li>
-          <li className='Header-liF'>
-            <a className='Header-a'>
+          <li className='Header-li'>
+            <Link to="/technology" className='Header-a'>
             03 TECHNOLOGY
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

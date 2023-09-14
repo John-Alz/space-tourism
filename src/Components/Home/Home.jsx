@@ -1,9 +1,10 @@
 import React from 'react'
 import './Home.scss'
+import Header from '../Header/Header'
 
 const Home = () => {
   return (
-    <main className='Home'>
+      <main className='Home'>
     <div className='Home-container'>
     <div className='Home-right'>
     <div className='Home-text'>
@@ -22,6 +23,7 @@ const Home = () => {
     </div>
     </div>
     </main>
+    
   )
 }
 
