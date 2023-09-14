@@ -37,7 +37,7 @@ export default function Destination() {
         
     </div>
     <div className='Destination-rtwo'>
-        <img className='Destination-rimg' src={destination.images.png} alt='moon'/>
+        <img className='Destination-rimg' src={destination.images.webp} alt='moon'/>
     </div>
     </div>
     </div>
