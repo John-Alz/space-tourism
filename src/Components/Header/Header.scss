@@ -161,6 +161,7 @@
   &-nav.isActive{
     height: 100vh;
     opacity: 1;
+    z-index: 2;
 }
 
   &-ul {
@@ -191,7 +192,7 @@
       display: block;
       margin-right: 40px;
       width: 35px;
-      z-index: 2;
+      z-index: 4;
       cursor: pointer;
     }
   }
