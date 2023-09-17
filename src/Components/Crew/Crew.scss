@@ -273,9 +273,17 @@
 
     &-nav {
         position: absolute;
-        top: 520px;
-        left: 70px;
+        top: 32rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        z-index: 10;
     }
+
+    &-ul {
+        gap: 1.2em;
+    }
+
 
     &-right {
         position: absolute;
@@ -297,6 +305,10 @@
         &-lone {
             margin-top: 0;
             // background-color: red;
+        }
+
+        &-nav {
+            top: 30rem;
         }
     }
     
