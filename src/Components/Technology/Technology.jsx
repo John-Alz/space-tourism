@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Technology.scss'
 import img from '../../assets/technology/image-launch-vehicle-portrait.jpg'
 import db from '../../data.json'
+import Image from './Image';
 
 export default function Technology() {
 
@@ -9,6 +10,7 @@ export default function Technology() {
 
     const initialState = db.technology.find(tech => tech.name === "Launch vehicle")
     const [technology, setTechnology] = useState(initialState)
+    const isLargeScreen = window.innerWidth >= 1200;
 
     const handleClick = (e) => {
         const nombre = e.target.name;
@@ -16,6 +18,8 @@ export default function Technology() {
         const techFound = db.technology.find(tech => tech.name === nombre);
         setTechnology(techFound)
     }
+
+    
 
 
   return (
@@ -64,8 +68,10 @@ export default function Technology() {
 
         <div className='Technology-right'>
         <div className='Technology-rdivc'>
-            <img className='Technology-img' src={technology.images.portrait} alt='img'/>
+            <img className='Technology-img' src={isLargeScreen ? technology.images.portrait : technology.images.landscape} alt='img'/>
         </div>
+
+        {/* <Image/> */}
         
         </div>
         </div>

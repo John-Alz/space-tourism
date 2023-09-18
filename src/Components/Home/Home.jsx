@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.scss'
 import Header from '../Header/Header'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -18,7 +19,10 @@ const Home = () => {
     </div>
     <div className='Home-left'>
     <div className='Home-button-container'>
+  <Link to='/destination'>
     <button className='Home-button'>EXPLORE</button>
+  </Link>
+    
     </div>
     </div>
     </div>

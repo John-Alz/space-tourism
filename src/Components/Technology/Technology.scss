@@ -167,15 +167,173 @@
         width: 100%;
     }
 
+    &-ldivc {
+        // background-color: violet;
+        padding: 0;
+        margin: 0 auto;
+        gap: 400px;
+    }
+
+    &-lone {
+        // margin: 0 auto;
+        // margin-left: 30px;
+        margin: 30px 0 40px 30px;
+        padding:  40px 0 20px 0;
+    }
+    &-lone p, h1{
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    &-secTwo {
+        flex-direction: column;
+        margin: 0 auto;
+        // width: 50%;
+        gap: 20px;
+        // background-color: green;
+    }
+
+    &-ul {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+    }
+
+    &-info {
+        text-align: center;
+    }
+
+    &-vehicle {
+        margin-top: 25px;
+    }
+
+
+    &-vehicle h1 {
+        font-size: 40px;
+    }
+
+    &-description p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+
     &-right {
         width: 100%;
+        padding: 0;
+        justify-content: center;
+        position: absolute;
+        top: 180px;
     }
+
+    &-img {
+        width: 100%;
+    }
+
     }
 }
 
 @media only screen and (max-width: 600px){
 	/*Big smartphones [426px -> 600px]*/
+    .Technology {
+        background: url('../../assets/technology/background-technology-tablet.jpg');
+        // height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+        &-container {
+            flex-direction: column;
+        }
+        &-left {
+            width: 100%;
+        }
+    
+        &-ldivc {
+            // background-color: violet;
+            padding: 0;
+            margin: 0 auto;
+            gap: 230px;
+        }
+    
+        &-lone {
+            margin: 0 auto;
+            // margin-left: 30px;
+            // margin: 30px 0 40px 30px;
+            padding:  40px 0 20px 0;
+        }
+        &-lone p, h1{
+            font-size: 16px;
+            letter-spacing: 2.7px;
+        }
+    
+        &-secTwo {
+            width: 100vw;
+            flex-direction: column;
+            margin: 0 auto;
+            // width: 50%;
+            gap: 20px;
+            // background-color: green;
+        }
+    
+        &-ul {
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+        }
+        &-a {
+            padding: 20px 30px 20px 30px;
+            display: flex;
+            border: 1px solid #FFFFFF;
+            border-radius: 50%;
+            justify-content: center;
+            // background: blueviolet;
+            margin-bottom: 30px;
+            font-family: 'Bellefair', serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+        }
+    
+        &-info {
+            text-align: center;
+            width: 100%;
+        }
 
+
+        &-terminology h2 {
+            font-size: 14px;
+            letter-spacing: 2.36px;
+        }
+    
+        &-vehicle {
+            margin-top: 25px;
+        }
+    
+    
+        &-vehicle h1 {
+            font-size: 24px;
+        }
+
+        &-description  {
+            width: 80%;
+            margin:  0 auto;
+        }
+    
+        &-description p{
+            font-size: 15px;
+            line-height: 25px;
+        }
+    
+        &-right {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            position: absolute;
+            top: 80px;
+        }
+
+        
+        }
 
 }
 
