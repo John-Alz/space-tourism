@@ -22,6 +22,12 @@ export default function Crew() {
         console.log("funcionaaa");
     }
 
+    const [activeItem, setActiveItem] = useState(0);
+
+    const handleActive = (index) => {
+      setActiveItem(index);
+    }
+
 
   return (
     <div className='Crew'>
@@ -51,16 +57,16 @@ export default function Crew() {
         </div>
         <div className='Crew-nav'>
         <ul className='Crew-ul'>
-            <li className='Crew-li'>
+            <li onClick={() => handleActive(0)} className={`Crew-li ${activeItem === 0 ? 'active' : ''}`}>
             <a className='Crew-a' href='#' name='Douglas Hurley' onClick={handleSubmit}>ㅤ</a>
             </li>
-            <li className='Crew-li'>
+            <li onClick={() => handleActive(1)} className={`Crew-li ${activeItem === 1 ? 'active' : ''}`}>
             <a className='Crew-a' href='#'  name='Mark Shuttleworth' onClick={handleSubmit}>ㅤ</a>
             </li>
-            <li className='Crew-li'>
+            <li onClick={() => handleActive(2)} className={`Crew-li ${activeItem === 2 ? 'active' : ''}`}>
             <a className='Crew-a' href='#'  name="Victor Glover" onClick={handleSubmit}>ㅤ</a>
             </li>
-            <li className='Crew-li'>
+            <li onClick={() => handleActive(3)} className={`Crew-li ${activeItem === 3 ? 'active' : ''}`}>
             <a className='Crew-a' href='#'  name="Anousheh Ansari" onClick={handleSubmit}>ㅤ</a>
             </li>
         </ul>

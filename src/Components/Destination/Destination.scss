@@ -82,12 +82,13 @@
         letter-spacing: 2.7px;
         color: #FFFFFF;
         text-transform: uppercase;
+        padding: 8px 0  8px 0;
     }
 
 
     &-li:after {
         position: relative;
-        top: 8px;
+        top: 11px;
         content: "";
         // display: inline-block;
         width: 0px;
@@ -98,26 +99,15 @@
         transition-duration: .3s;
       }
       
-      &-li:hover:after {
+      &-li:not(.active):hover:after {
         opacity: 1;
         width: 100%;
       }
 
-      &-isActive:after {
-        position: relative;
-        top: 8px;
-        content: "";
-        display: inline-block;
-        width: 0px;
-        background: #979797;
-        height: 3px;
-        opacity: 0;
+      &-li.active {
+        border-bottom: #FFFFFF 3.5px solid;
       }
 
-      &-isActive:active:after {
-        opacity: 1;
-        width: 100%;
-      }
 
     &-name {
         // background-color: violet;
@@ -131,9 +121,9 @@
         text-transform: uppercase;
     }
 
-    &-description {
-        // background-color: #464A53;
-    }
+    // &-description {
+    //     // background-color: #464A53;
+    // }
 
     &-description p{
         color: #D0D6F9;

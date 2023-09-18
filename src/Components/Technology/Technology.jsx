@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './Technology.scss'
-import img from '../../assets/technology/image-launch-vehicle-portrait.jpg'
 import db from '../../data.json'
-import Image from './Image';
 
 export default function Technology() {
 
@@ -19,7 +17,11 @@ export default function Technology() {
         setTechnology(techFound)
     }
 
-    
+    const [activeItem, setActiveItem] = useState(0);
+
+    const handleActive = (index) => {
+      setActiveItem(index);
+    }
 
 
   return (
@@ -38,13 +40,13 @@ export default function Technology() {
         <div className='Technology-secTwo'>
         <div className='Technology-nav'>
         <ul className='Technology-ul'>
-            <li className='Technology-li'>
+            <li onClick={() => handleActive(0)} className={`Technology-li ${activeItem === 0 ? 'active' : ''}`}>
             <a className='Technology-a' href='#' name="Launch vehicle" onClick={handleClick}>1</a>
             </li>
-            <li className='Technology-li'>
+            <li onClick={() => handleActive(1)} className={`Technology-li ${activeItem === 1 ? 'active' : ''}`}>
             <a className='Technology-a' href='#' name="Spaceport" onClick={handleClick}>2</a>
             </li>
-            <li className='Technology-li'>
+            <li onClick={() => handleActive(2)} className={`Technology-li ${activeItem === 2 ? 'active' : ''}`}>
             <a className='Technology-a' href='#' name="Space capsule" onClick={handleClick}>3</a>
             </li>
         </ul>
@@ -71,7 +73,6 @@ export default function Technology() {
             <img className='Technology-img' src={isLargeScreen ? technology.images.portrait : technology.images.landscape} alt='img'/>
         </div>
 
-        {/* <Image/> */}
         
         </div>
         </div>

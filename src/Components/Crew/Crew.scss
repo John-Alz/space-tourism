@@ -94,14 +94,19 @@
     }
 
     &-li {
-        background-color: #979797;
+        background-color: #34363F;
         width: 15px;
         height: 15px;
         border-radius: 50%;
     }
 
-    &-li:hover {
+    &-li.active {
         background-color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    &-li:hover {
+        background-color: #979797;
         cursor: pointer;
     }
 

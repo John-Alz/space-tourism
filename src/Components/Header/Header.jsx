@@ -3,12 +3,14 @@ import './Header.scss'
 import logo from '../../assets/shared/logo.svg'
 import iconBurger from '../../assets/shared/icon-hamburger.svg'
 import iconClose from '../../assets/shared/icon-close.svg'
-import { Link } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 export default function Header() {
 
 
   const [menu, setMenu] = useState(false)
+
+  const location = useLocation();
 
   const handleToggle = () => {
     setMenu(!menu)
@@ -29,25 +31,25 @@ export default function Header() {
 
       <nav className={`Header-nav ${menu ? 'isActive' : ''}`}>
         <ul className='Header-ul'>
-          <li className='Header-li'>
-            <Link to="/" className='Header-a'>
+          <li className={`Header-li ${location.pathname === '/' ? 'active' : ''}`}>
+            <NavLink to="/" className='Header-a' activeClassName="Header-active">
             00 HOME
-            </Link>
+            </NavLink>
           </li>
-          <li className='Header-li'>
-            <Link to="/destination" className='Header-a'>
+          <li className={`Header-li ${location.pathname === '/destination' ? 'active' : ''}`}>
+            <NavLink to="/destination" className='Header-a' activeClassName="Header-active">
             01 DESTINATION
-            </Link>
+            </NavLink>
           </li>
-          <li className='Header-li'>
-            <Link to="/crew" className='Header-a'>
+          <li className={`Header-li ${location.pathname === '/crew' ? 'active' : ''}`}>
+            <NavLink to="/crew" className='Header-a' activeClassName="Header-active">
             02 CREW
-            </Link>
+            </NavLink>
           </li>
-          <li className='Header-li'>
-            <Link to="/technology" className='Header-a'>
+          <li className={`Header-li ${location.pathname === '/technology' ? 'active' : ''}`}>
+            <NavLink to="/technology" className='Header-a' activeClassName="Header-active">
             03 TECHNOLOGY
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
